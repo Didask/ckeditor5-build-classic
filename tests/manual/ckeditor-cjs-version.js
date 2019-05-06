@@ -1,14 +1,14 @@
 /**
  * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
- * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
+ * For licensing, see LICENSE.md.
  */
 
 /* eslint-env commonjs */
 /* globals window, document, console */
 
-const ClassicEditor = require( '../../build/ckeditor' );
+const DidaskClassicEditor = require( '../../build/ckeditor' );
 
-ClassicEditor.create( document.querySelector( '#editor' ) )
+DidaskClassicEditor.create( document.querySelector( '#editor' ) )
 	.then( editor => {
 		window.editor = editor;
 	} )

@@ -1,15 +1,15 @@
 /**
  * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
- * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
+ * For licensing, see LICENSE.md.
  */
 
 /* globals document */
 
-import ClassicEditor from '../src/ckeditor';
+import DidaskClassicEditor from '../src/ckeditor';
 import BaseClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 import { describeMemoryUsage, testMemoryUsage } from '@ckeditor/ckeditor5-core/tests/_utils/memory';
 
-describe( 'ClassicEditor build', () => {
+describe( 'DidaskClassicEditor build', () => {
 	let editor, editorElement;
 
 	beforeEach( () => {
@@ -26,17 +26,17 @@ describe( 'ClassicEditor build', () => {
 
 	describe( 'build', () => {
 		it( 'contains plugins', () => {
-			expect( ClassicEditor.builtinPlugins ).to.not.be.empty;
+			expect( DidaskClassicEditor.builtinPlugins ).to.not.be.empty;
 		} );
 
 		it( 'contains config', () => {
-			expect( ClassicEditor.defaultConfig.toolbar ).to.not.be.empty;
+			expect( DidaskClassicEditor.defaultConfig.toolbar ).to.not.be.empty;
 		} );
 	} );
 
 	describe( 'create()', () => {
 		beforeEach( () => {
-			return ClassicEditor.create( editorElement )
+			return DidaskClassicEditor.create( editorElement )
 				.then( newEditor => {
 					editor = newEditor;
 				} );
@@ -46,8 +46,8 @@ describe( 'ClassicEditor build', () => {
 			return editor.destroy();
 		} );
 
-		it( 'creates an instance which inherits from the ClassicEditor', () => {
-			expect( editor ).to.be.instanceof( ClassicEditor );
+		it( 'creates an instance which inherits from the DidaskClassicEditor', () => {
+			expect( editor ).to.be.instanceof( DidaskClassicEditor );
 			expect( editor ).to.be.instanceof( BaseClassicEditor );
 		} );
 
@@ -58,7 +58,7 @@ describe( 'ClassicEditor build', () => {
 
 	describe( 'destroy()', () => {
 		beforeEach( () => {
-			return ClassicEditor.create( editorElement )
+			return DidaskClassicEditor.create( editorElement )
 				.then( newEditor => {
 					editor = newEditor;
 				} );
@@ -85,7 +85,7 @@ describe( 'ClassicEditor build', () => {
 
 	describe( 'plugins', () => {
 		beforeEach( () => {
-			return ClassicEditor.create( editorElement )
+			return DidaskClassicEditor.create( editorElement )
 				.then( newEditor => {
 					editor = newEditor;
 				} );
@@ -174,7 +174,7 @@ describe( 'ClassicEditor build', () => {
 
 		// https://github.com/ckeditor/ckeditor5/issues/572
 		it( 'allows configuring toolbar items through config.toolbar', () => {
-			return ClassicEditor
+			return DidaskClassicEditor
 				.create( editorElement, {
 					toolbar: [ 'bold' ]
 				} )
@@ -187,7 +187,7 @@ describe( 'ClassicEditor build', () => {
 
 		// https://github.com/ckeditor/ckeditor5/issues/572
 		it( 'allows configuring toolbar offset without overriding toolbar items', () => {
-			return ClassicEditor
+			return DidaskClassicEditor
 				.create( editorElement, {
 					toolbar: {
 						viewportTopOffset: 42
@@ -205,6 +205,6 @@ describe( 'ClassicEditor build', () => {
 	describeMemoryUsage( () => {
 		testMemoryUsage(
 			'should not grow on multiple create/destroy',
-			() => ClassicEditor.create( document.querySelector( '#mem-editor' ) ) );
+			() => DidaskClassicEditor.create( document.querySelector( '#mem-editor' ) ) );
 	} );
 } );

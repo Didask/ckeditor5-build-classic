@@ -1,6 +1,6 @@
 /**
  * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
- * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
+ * For licensing, see LICENSE.md.
  */
 
 'use strict';
@@ -21,7 +21,7 @@ module.exports = {
 
 	output: {
 		// The name under which the editor will be exported.
-		library: 'ClassicEditor',
+		library: 'DidaskClassicEditor',
 
 		path: path.resolve( __dirname, 'build' ),
 		filename: 'ckeditor.js',

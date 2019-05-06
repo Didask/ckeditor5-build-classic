@@ -1,4 +1,4 @@
-CKEditor 5 classic editor build
+CKEditor 5 classic editor build (Didask version)
 ========================================
 
 [![Join the chat at https://gitter.im/ckeditor/ckeditor5](https://badges.gitter.im/ckeditor/ckeditor5.svg)](https://gitter.im/ckeditor/ckeditor5?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -9,9 +9,9 @@ CKEditor 5 classic editor build
 [![Dependency Status](https://david-dm.org/ckeditor/ckeditor5-build-classic/status.svg)](https://david-dm.org/ckeditor/ckeditor5-build-classic)
 [![devDependency Status](https://david-dm.org/ckeditor/ckeditor5-build-classic/dev-status.svg)](https://david-dm.org/ckeditor/ckeditor5-build-classic?type=dev)
 
-The classic editor build for CKEditor 5. Read more about the [classic editor build](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor) and see the [demo](https://ckeditor.com/docs/ckeditor5/latest/examples/builds/classic-editor.html).
+The classic editor build (Didask version) for CKEditor 5. Read more about the [classic editor build](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor) and see the [demo](https://ckeditor.com/docs/ckeditor5/latest/examples/builds/classic-editor.html).
 
-![CKEditor 5 classic editor build screenshot](https://c.cksource.com/a/1/img/npm/ckeditor5-build-classic.png)
+![CKEditor 5 classic editor build (Didask version) screenshot](https://c.cksource.com/a/1/img/npm/ckeditor5-build-classic.png)
 
 ## Documentation
 
@@ -27,7 +27,7 @@ See:
 First, install the build from npm:
 
 ```bash
-npm install --save @ckeditor/ckeditor5-build-classic
+npm install --save https://github.com/Didask/ckeditor5-build-didask-classic
 ```
 
 And use it in your website:
@@ -36,9 +36,9 @@ And use it in your website:
 <div id="editor">
 	<p>This is the editor content.</p>
 </div>
-<script src="./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
+<script src="./node_modules/@didask/ckeditor5-build-didask-classic/build/ckeditor.js"></script>
 <script>
-	ClassicEditor
+	DidaskClassicEditor
 		.create( document.querySelector( '#editor' ) )
 		.then( editor => {
 			window.editor = editor;
@@ -52,12 +52,12 @@ And use it in your website:
 Or in your JavaScript application:
 
 ```js
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import DidaskClassicEditor from '@didask/ckeditor5-build-didask-classic';
 
 // Or using the CommonJS version:
-// const ClassicEditor = require( '@ckeditor/ckeditor5-build-classic' );
+// const DidaskClassicEditor = require( '@didask/ckeditor5-build-didask-classic' );
 
-ClassicEditor
+DidaskClassicEditor
 	.create( document.querySelector( '#editor' ) )
 	.then( editor => {
 		window.editor = editor;

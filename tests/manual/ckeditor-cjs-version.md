@@ -1,4 +1,4 @@
-# CKEditor 5 classic build – standard version (CommonJS `require()`)
+# CKEditor 5 classic build (Didask version) – standard version (CommonJS `require()`)
 
 Just play with it.
 
